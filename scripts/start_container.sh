@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+# Pull the Docker image from Docker Hub
+docker pull jayendraklouder/cicd-flask-app:latest
+
+# Run the Docker image as a container
+docker run -p 5000:5000 jayendraklouder/cicd-flask-app:latest
