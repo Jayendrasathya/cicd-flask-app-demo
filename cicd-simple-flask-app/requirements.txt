@@ -1,1 +1,3 @@
-flask
+-i https://pypi.org/simple
+
+flask[async]==3.0.3
