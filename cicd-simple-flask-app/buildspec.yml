@@ -23,5 +23,6 @@ phases:
   
 artifacts:
   files:
-    - '**/*'
-  base-directory: cicd-simple-flask-app/
+  #  - '**/*'
+  #base-directory: cicd-simple-flask-app/
+    - imagedefinitions.json
