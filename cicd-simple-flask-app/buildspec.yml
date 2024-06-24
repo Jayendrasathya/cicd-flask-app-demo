@@ -20,9 +20,13 @@ phases:
   post_build:
     commands:
       - echo "Build completed successfully!"
+      - Printf ‘[{“name”:”%s”,”imageUri”:”%s”}]’ “cicd” “jayendraklouder/cicd-flask-app:latest” > imagedefinitions.json
+      - echo "printing imagedefinitions.json"
+      - cat imagedefinitions.json
   
 artifacts:
   files:
   #  - '**/*'
   #base-directory: cicd-simple-flask-app/
     - imagedefinitions.json
+  base-directory: cicd-simple-flask-app/
