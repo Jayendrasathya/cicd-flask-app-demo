@@ -26,8 +26,8 @@ phases:
   post_build:
     commands:
       - echo pushing to repo..
-      - docker push $REPO_URI:latest
-      - docker push $REPO_URI:$IMAGE_TAG
+      - docker push 121099973511.dkr.ecr.eu-west-2.amazonaws.com/cicd-demo-flask-ecr:latest
+      - docker push 121099973511.dkr.ecr.eu-west-2.amazonaws.com/cicd-demo-flask-ecr:$IMAGE_TAG
       - echo writing image definitions file..
       #container name
       - DOCKER_CONTAINER_NAME=cicd
