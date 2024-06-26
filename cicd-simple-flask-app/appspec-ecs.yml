@@ -10,7 +10,7 @@
     				"ContainerName": "",
     				"ContainerPort":
     			},
-    			"PlatformVersion": "",
+    			"PlatformVersion": "LATEST",
     			"NetworkConfiguration": {
     				"AwsvpcConfiguration": {
     					"Subnets": [
