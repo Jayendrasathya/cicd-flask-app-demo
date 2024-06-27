@@ -4,16 +4,16 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "" 
-          ContainerName: "" 
-          ContainerPort: "" 
+        TaskDefinition: "arn:aws:ecs:eu-west-2:121099973511:task-definition/cicd-demo-5000:9" 
+          ContainerName: "cicd-5000-tcp" 
+          ContainerPort: "5000" 
           
         PlatformVersion: "LATEST" 
         NetworkConfiguration:
           AwsvpcConfiguration:
-            Subnets: ["",""] 
-            SecurityGroups: ["",""] 
-            AssignPublicIp: "" 
+            Subnets: ["subnet-00f2ed06840c3befc","subnet-0e8ecfad53014d0a1"] 
+            SecurityGroups: "sg-0289fd98004bad5eb" 
+            AssignPublicIp: "ENABLED" 
             
 Hooks:
     - BeforeInstall: "" 
