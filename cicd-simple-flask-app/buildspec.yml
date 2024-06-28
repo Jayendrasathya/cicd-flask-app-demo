@@ -36,12 +36,19 @@ phases:
       - cat imagedefinitions.json
   
 artifacts:
-  files:
+  files: 
+    - 'image*.json'
+    - 'appspec.yaml'
+    - 'taskdef.json'
+  secondary-artifacts:
+    DefinitionArtifact:
+      files:
+        - appspec.yaml
+        - taskdef.json
+    ImageArtifact:
+      files:
+        - imagedefinitions.json
   #  - '**/*'
   #base-directory: cicd-simple-flask-app/
-    - imagedefinitions.json
-    - appspec.yml
-    - taskdef.json
-  base-directory: cicd-simple-flask-app/
 
 # Make sure, selecting ecs as a deploy stage and enter the "imagedefinition.json" at 'Image definitions file - optional' area.
