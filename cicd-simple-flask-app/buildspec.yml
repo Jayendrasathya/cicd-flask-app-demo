@@ -49,6 +49,6 @@ artifacts:
       files:
         - imagedefinitions.json
   #  - '**/*'
-  #base-directory: cicd-simple-flask-app/
+  base-directory: cicd-simple-flask-app/
 
 # Make sure, selecting ecs as a deploy stage and enter the "imagedefinition.json" at 'Image definitions file - optional' area.
