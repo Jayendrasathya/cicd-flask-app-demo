@@ -20,6 +20,7 @@ phases:
       - echo building the docker image..
       - cd cicd-simple-flask-app/
       - docker build -t $REPO_URI:latest .
+      - docker tag cicd-demo-flask-ecr:latest $REPO_URI:latest
       #- docker tag $REPO_URI:latest $REPO_URI:$IMAGE_TAG
       #- docker push "jayendraklouder/cicd-flask-app:latest"
   post_build:
