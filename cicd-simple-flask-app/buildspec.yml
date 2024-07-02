@@ -42,14 +42,14 @@ artifacts:
     - 'image*.json'
     - 'appspec.yml'
     - 'taskdef.json'
-  secondary-artifacts:
-    DefinitionArtifact:
-      files:
-        - appspec.yml
-        - taskdef.json
-    ImageArtifact:
-      files:
-        - imageDetail.json
+  #secondary-artifacts:
+   # DefinitionArtifact:
+    #  files:
+     #   - appspec.yml
+      #  - taskdef.json
+    #ImageArtifact:
+     # files:
+      #  - imageDetail.json
   #  - '**/*'
   base-directory: cicd-simple-flask-app/
 
