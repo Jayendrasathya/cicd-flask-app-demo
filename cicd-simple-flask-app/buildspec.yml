@@ -19,8 +19,9 @@ phases:
       - pip install -r cicd-simple-flask-app/requirements.txt
       - echo building the docker image..
       - cd cicd-simple-flask-app/
-      - docker build -t $REPO_URI:latest .
-      - docker tag cicd-demo-flask-ecr:latest $REPO_URI:latest
+      - docker build -t cicd-demo-flask-ecr .
+      #- docker build -t $REPO_URI:latest .
+      - docker tag cicd-demo-flask-ecr:latest 121099973511.dkr.ecr.eu-west-2.amazonaws.com/cicd-demo-flask-ecr:latest
       #- docker tag $REPO_URI:latest $REPO_URI:$IMAGE_TAG
       #- docker push "jayendraklouder/cicd-flask-app:latest"
   post_build:
