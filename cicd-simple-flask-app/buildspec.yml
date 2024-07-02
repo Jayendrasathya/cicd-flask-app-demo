@@ -30,10 +30,10 @@ phases:
       - echo writing image definitions file..
       #container name
       - DOCKER_CONTAINER_NAME=cicd
-      - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPO_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"%s","imageUri":"%s"}]' $DOCKER_CONTAINER_NAME $REPO_URI:$IMAGE_TAG > imageDetail.json
       - echo $DOCKER_CONTAINER_NAME
-      - echo printing imagedefinitions.json..
-      - cat imagedefinitions.json
+      - echo printing imageDetail.json..
+      - cat imageDetail.json
   
 artifacts:
   files: 
@@ -47,8 +47,9 @@ artifacts:
         - taskdef.json
     ImageArtifact:
       files:
-        - imagedefinitions.json
+        - imageDetail.json
   #  - '**/*'
   base-directory: cicd-simple-flask-app/
 
-# Make sure, selecting ecs as a deploy stage and enter the "imagedefinition.json" at 'Image definitions file - optional' area.
+# Make sure, selecting deploy stage as ECS in codePipeline and change 'imageDetail' as 'imagedefinition' in 'buildspec.yml' file and enter the "imagedefinition.json" at 'Image definitions file - optional' area.
+# If you are using blue/green deployment in ECS choose 'ECS(blue/green)' as deploy stage in codePipeline, use imageDetail.json as a artifact.
