@@ -32,7 +32,7 @@ phases:
       - echo writing image definitions file..
       #container name
       - DOCKER_CONTAINER_NAME=cicd
-      - printf '[{"ImageURI":"%s"}]' $REPO_URI:latest > imageDetail.json
+      - printf '{"ImageURI":"%s"}' $REPO_URI:latest > imageDetail.json
       - echo $DOCKER_CONTAINER_NAME
       - echo printing imageDetail.json..
       - cat imageDetail.json
